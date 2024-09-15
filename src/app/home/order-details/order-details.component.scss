@@ -1,0 +1,38 @@
+.header {
+    width: 100%;
+    height: 70px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+
+        ion-button {
+            position: absolute;
+            color: var(--white-color);
+        }
+
+        span {
+            font-size: 20px;
+            margin: 0 auto;
+        }
+    }
+}
+
+ion-item {
+    --padding-start: 10px;
+}
+
+ion-thumbnail img {
+    border-radius: 8px;
+}
+
+ion-card {
+    margin-bottom: 15px;
+}

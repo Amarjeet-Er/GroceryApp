@@ -10,7 +10,37 @@
 <ion-content>
   <div class="nextproduct">
     <div class="nextproductRow">
-      <span>Fruits & Vegetables</span>
+      <span>Fruits</span>
+    </div>
+    <div class="nextproductContainer">
+      <div class="manage">
+        <div class="card" *ngFor="let product of categorys">
+          <div>
+            <img src="{{product.path}}">
+            <h3>{{product.name}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nextproduct">
+    <div class="nextproductRow">
+      <span>Vegetables</span>
+    </div>
+    <div class="nextproductContainer">
+      <div class="manage">
+        <div class="card" *ngFor="let product of categorys">
+          <div>
+            <img src="{{product.path}}">
+            <h3>{{product.name}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nextproduct">
+    <div class="nextproductRow">
+      <span>food product</span>
     </div>
     <div class="nextproductContainer">
       <div class="manage">

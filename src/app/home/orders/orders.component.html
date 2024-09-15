@@ -1,0 +1,58 @@
+<div class="header">
+  <div class="navbar">
+    <ion-button fill="clear" shape="round" routerLink="/home/account">
+      <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+    </ion-button>
+    <span>My Orders</span>
+    <div class="seletedItem">
+      <ion-icon name="search-outline" (click)="search()"></ion-icon>
+      <ion-icon name="cart" (click)="cart()"></ion-icon>
+      <span>{{cart_length}}</span>
+    </div>
+  </div>
+</div>
+
+<ion-content>
+  <!-- this code to design card where image, title, rating etc  -->
+  <ion-card (click)="orderdetails()">
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <img alt="image" src="../../../assets/image/img-3.png" />
+      </ion-thumbnail>
+      <ion-item lines="none">
+        <ion-label>
+          <h2>Lakme Eyeconic Liquid Eyeliner 24HR Waterproof Black Matte
+            (4.5ml)</h2>
+          <p>Liquid Eyeliner</p>
+          <div class="productRate">
+            <p>Rate this product now</p>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </ion-label>
+      </ion-item>
+    </ion-item>
+  </ion-card>
+
+  <ion-card (click)="orderdetails()">
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <img alt="image" src="../../../assets/image/snacks-img.jpeg">
+      </ion-thumbnail>
+      <ion-item lines="none">
+        <ion-label>
+          <h2>Lakme Eyeconic Liquid Eyeliner 24HR Waterproof Black Matte
+            (4.5ml)</h2>
+          <p>Liquid Eyeliner</p>
+
+          <div class="productRate">
+            <p>Rate this product now</p>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </ion-label>
+      </ion-item>
+    </ion-item>
+  </ion-card>
+
+
+
+</ion-content>

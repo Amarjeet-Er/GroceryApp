@@ -36,7 +36,7 @@ ion-content {
     .nextproductContainer {
       .manage {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         margin: 0px 10px 0px 0px;
 
         .card {
@@ -57,7 +57,7 @@ ion-content {
           img {
             border-radius: 20px 20px 0px 0px;
             align-items: center;
-            height: 120px;
+            height: 80px;
             width: 100%;
           }
         }

@@ -10,6 +10,10 @@ import { TearmAndConditionComponent } from './tearm-and-condition/tearm-and-cond
 import { FaqComponent } from './faq/faq.component';
 import { LocationTrackComponent } from './location-track/location-track.component';
 import { SettingComponent } from './setting/setting.component';
+import { OrdersComponent } from './orders/orders.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
+import { HelpCenterComponent } from './help-center/help-center.component';
+import { CouponsComponent } from './coupons/coupons.component';
 
 const routes: Routes = [
   {
@@ -28,6 +32,10 @@ const routes: Routes = [
   { path: 'faq', component: FaqComponent },
   { path: 'locationtrack', component: LocationTrackComponent },
   { path: 'setting', component: SettingComponent },
+  { path: 'orders', component: OrdersComponent },
+  { path: 'orderdetails', component: OrderDetailsComponent },
+  { path: 'helpcenter', component: HelpCenterComponent },
+  { path: 'coupons', component: CouponsComponent },
 ];
 
 @NgModule({

@@ -1,0 +1,103 @@
+<div class="header">
+  <div class="navbar">
+    <ion-button fill="clear" shape="round" routerLink="/home/account">
+      <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+    </ion-button>
+    <span>Order Details</span>
+  </div>
+</div>
+
+<ion-content>
+  <!-- Order Overview -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Order #{{ order.id }}</ion-card-title>
+      <ion-card-subtitle>{{ order.date | date: 'fullDate' }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Status:</strong> {{ order.status }}</p>
+      <p><strong>Total Amount:</strong> ₹{{ order.totalAmount }}</p>
+      <p><strong>Delivery Address:</strong> {{ order.deliveryAddress }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Items List -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Items Ordered</ion-label>
+    </ion-list-header>
+
+    <!-- Iterate through the items -->
+    <ion-item *ngFor="let item of order.items">
+      <ion-thumbnail slot="start">
+        <img [src]="item.image" alt="{{ item.name }}" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ item.name }}</h2>
+        <p>{{ item.quantity }} x ₹{{ item.price }}</p>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end">
+        ₹{{ item.totalPrice }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Payment Summary -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Payment Summary</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>Subtotal</ion-col>
+          <ion-col class="ion-text-right">₹{{ order.subTotal }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Tax</ion-col>
+          <ion-col class="ion-text-right">₹{{ order.tax }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Delivery Fee</ion-col>
+          <ion-col class="ion-text-right">₹{{ order.deliveryFee }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><strong>Total</strong></ion-col>
+          <ion-col class="ion-text-right"><strong>₹{{ order.totalAmount }}</strong></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Order Tracking Section -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Delivery Status</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-icon slot="start" name="cube-outline"></ion-icon>
+        <ion-label>Order Confirmed</ion-label>
+        <ion-icon slot="end" [name]="order.status === 'confirmed' ? 'checkmark-outline' : ''"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="car-outline"></ion-icon>
+        <ion-label>Shipped</ion-label>
+        <ion-icon slot="end" [name]="order.status === 'shipped' ? 'checkmark-outline' : ''"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Out for Delivery</ion-label>
+        <ion-icon slot="end" [name]="order.status === 'outForDelivery' ? 'checkmark-outline' : ''"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="checkmark-done-outline"></ion-icon>
+        <ion-label>Delivered</ion-label>
+        <ion-icon slot="end" [name]="order.status === 'delivered' ? 'checkmark-outline' : ''"></ion-icon>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Contact Support Button -->
+  <ion-button expand="block" color="danger" (click)="contactSupport()">Need Help?</ion-button>
+</ion-content>

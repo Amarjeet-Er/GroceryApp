@@ -8,10 +8,12 @@
 <ion-content>
   <!-- account info like orders, wishlist etc html code here  -->
   <ion-list class="accountInfo">
-    <ion-card>
-      <ion-icon name="cube-outline"></ion-icon>
-      <span>Orders</span>
-    </ion-card>
+    <div routerLink="/home/orders">
+      <ion-card>
+        <ion-icon name="cube-outline"></ion-icon>
+        <span>Orders</span>
+      </ion-card>
+    </div>
 
     <div routerLink="/home/cart">
       <ion-card>
@@ -20,15 +22,19 @@
       </ion-card>
     </div>
 
-    <ion-card>
-      <ion-icon name="gift-outline"></ion-icon>
-      <span>Coupons</span>
-    </ion-card>
+    <div routerLink="/home/coupons">
+      <ion-card>
+        <ion-icon name="gift-outline"></ion-icon>
+        <span>Coupons</span>
+      </ion-card>
+    </div>
 
-    <ion-card>
-      <ion-icon name="help-outline"></ion-icon>
-      <span>Help Center</span>
-    </ion-card>
+    <div routerLink="/home/helpcenter">
+      <ion-card>
+        <ion-icon name="help-outline"></ion-icon>
+        <span>Help Center</span>
+      </ion-card>
+    </div>
 
   </ion-list>
 

@@ -1,0 +1,78 @@
+// header design code start here 
+
+.header {
+    width: 100%;
+    height: 70px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+
+        ion-button {
+            position: absolute;
+            color: var(--white-color);
+        }
+
+        span {
+            font-size: 20px;
+            margin: 0 auto;
+        }
+
+
+        .seletedItem {
+            width: 100px;
+            height: 100%;
+            display: flex;
+            gap: 10px;
+            font-size: 16px;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+            position: relative;
+
+            ion-icon {
+                font-size: 30px;
+            }
+
+            span {
+                position: absolute;
+                background: var(--primary-color);
+                padding: 5px;
+                border-radius: 50px;
+                right: 3px;
+                top: 2px;
+                font-size: 10px;
+                color: var(--white-color);
+                font-weight: 600;
+                border: 2px solid white;
+            }
+        }
+    }
+}
+
+
+// order card design start here 
+ion-card {
+    text-wrap: nowrap;
+
+    ion-label {
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .productRate {
+        display: flex;
+        gap: 5px;
+        font-size: 20px;
+        color: gray;
+        justify-content: space-between;
+    }
+
+}

@@ -25,6 +25,10 @@ import { CategoryProducatListComponent } from './home/category-producat-list/cat
 import { TearmAndConditionComponent } from './home/tearm-and-condition/tearm-and-condition.component';
 import { FaqComponent } from './home/faq/faq.component';
 import { LocationTrackComponent } from './home/location-track/location-track.component';
+import { OrdersComponent } from './home/orders/orders.component';
+import { OrderDetailsComponent } from './home/order-details/order-details.component';
+import { HelpCenterComponent } from './home/help-center/help-center.component';
+import { CouponsComponent } from './home/coupons/coupons.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,11 @@ import { LocationTrackComponent } from './home/location-track/location-track.com
     CategoryProducatListComponent,
     TearmAndConditionComponent,
     FaqComponent,
-    LocationTrackComponent
+    LocationTrackComponent,
+    OrdersComponent,
+    OrderDetailsComponent,
+    HelpCenterComponent,
+    CouponsComponent,
   ],
   imports: [
     BrowserModule, 

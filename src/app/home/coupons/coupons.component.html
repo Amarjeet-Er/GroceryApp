@@ -1,0 +1,41 @@
+<div class="header">
+  <div class="navbar">
+    <ion-button fill="clear" shape="round" routerLink="/home/account">
+      <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+    </ion-button>
+    <span>Coupons</span>
+  </div>
+</div>
+
+<ion-content>
+
+  <!-- Section Title -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Available Coupons</ion-card-title>
+      <ion-card-subtitle>Save more on your next order!</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- List of Coupons -->
+  <ion-list>
+    <!-- Single Coupon Item -->
+    <ion-item *ngFor="let coupon of coupons" lines="full">
+      <ion-thumbnail slot="start">
+        <img src="../../../assets/image/Coupons.jpg" />
+      </ion-thumbnail>
+
+      <ion-label>
+        <h2>{{ coupon.title }}</h2>
+        <p>Code: <strong>{{ coupon.code }}</strong></p>
+        <p>Discount: {{ coupon.discount }}</p>
+        <p>Expires: {{ coupon.expiryDate }}</p>
+      </ion-label>
+
+      <ion-button fill="solid" color="success" (click)="applyCoupon(coupon.code)">
+        Apply
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
