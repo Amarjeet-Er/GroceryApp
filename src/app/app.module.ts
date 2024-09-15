@@ -29,6 +29,7 @@ import { OrdersComponent } from './home/orders/orders.component';
 import { OrderDetailsComponent } from './home/order-details/order-details.component';
 import { HelpCenterComponent } from './home/help-center/help-center.component';
 import { CouponsComponent } from './home/coupons/coupons.component';
+import { SettingComponent } from './home/setting/setting.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { CouponsComponent } from './home/coupons/coupons.component';
     OrderDetailsComponent,
     HelpCenterComponent,
     CouponsComponent,
+    SettingComponent
   ],
   imports: [
     BrowserModule, 
