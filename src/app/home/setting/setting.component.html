@@ -1,3 +1,74 @@
-<p>
-  setting works!
-</p>
+<div class="header">
+  <div class="navbar">
+    <ion-button fill="clear" shape="round" routerLink="/home/account">
+      <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+    </ion-button>
+    <span>Setting</span>
+  </div>
+</div>
+
+<ion-content>
+  <ion-list lines="full">
+    <ion-item>
+      <h5>ORDER RELATED MESSAGES</h5>
+    </ion-item>
+    <ion-item>
+      <P
+        >Order related SMS cannot be disable as they are critical to provide
+        service</P
+      >
+    </ion-item>
+  </ion-list>
+  <ion-list lines="full">
+    <ion-item>
+      <h5>RECOMMENDATIONS & REMINDERS</h5>
+    </ion-item>
+    <ion-item>
+      <P
+        >Keep this on to receive offer recommendations & timely reminders based
+        on your interests
+      </P>
+    </ion-item>
+  </ion-list>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-toggle>
+        <ion-label>SMS</ion-label>
+      </ion-toggle>
+    </ion-item>
+  </ion-list>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-toggle>
+        <ion-label>WhatsApp</ion-label>
+      </ion-toggle>
+    </ion-item>
+  </ion-list>
+  <ion-list lines="full">
+    <ion-item>
+      <h5>PICTURE IN PICTURE MODE</h5>
+    </ion-item>
+  </ion-list>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-toggle>
+        <ion-label>Allow Picture in Picture Mode</ion-label>
+      </ion-toggle>
+    </ion-item>
+    <ion-item>
+      <p>
+        PIP mode allows you to live track your order in samll window pinned to
+        one corner of yours screen while you navigate to the other apps or the
+        home screen.
+      </p>
+    </ion-item>
+  </ion-list>
+  <ion-list lines="full">
+    <ion-item>
+      <h5>ACCOUNT DELETION</h5>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-button fill="clear" color="danger">Delete account</ion-button>
+  </ion-list>
+</ion-content>
