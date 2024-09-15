@@ -1,0 +1,106 @@
+<ion-header class="header">
+  <div class="navbar">
+    <span>Account</span>
+    <ion-icon name="search"></ion-icon>
+  </div>
+</ion-header>
+
+<ion-content>
+  <!-- account info like orders, wishlist etc html code here  -->
+  <ion-list class="accountInfo">
+    <ion-card>
+      <ion-icon name="cube-outline"></ion-icon>
+      <span>Orders</span>
+    </ion-card>
+
+    <ion-card>
+      <ion-icon name="heart-outline"></ion-icon>
+      <span>Wishlist</span>
+    </ion-card>
+
+    <ion-card>
+      <ion-icon name="gift-outline"></ion-icon>
+      <span>Coupons</span>
+    </ion-card>
+
+    <ion-card>
+      <ion-icon name="help-outline"></ion-icon>
+      <span>Help Center</span>
+    </ion-card>
+
+  </ion-list>
+
+  <!-- account list of Information like profile, address etc html code here  -->
+  <ion-list>
+    <ion-title>Account Settings</ion-title>
+
+    <ion-list>
+
+
+      <ion-item routerLink="/user/profile">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label>Profile</ion-label>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-item>
+
+      <ion-item routerLink="/home/locationtrack">
+        <ion-icon name="location-outline"></ion-icon>
+        <ion-label>Location Track</ion-label>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-item>
+
+      <ion-item routerLink="/user/address">
+        <ion-icon name="location-outline"></ion-icon>
+        <ion-label>Address</ion-label>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="refresh-circle-outline"></ion-icon>
+        <ion-label>Refunds</ion-label>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-item>
+
+
+    </ion-list>
+  </ion-list>
+
+  <ion-list>
+    <ion-title>Feedback & Information</ion-title>
+
+    <ion-list>
+      <ion-item routerLink="/home/tearmandcondition">
+        <ion-icon name="documents-outline"></ion-icon>
+        <ion-label>Terms, Policies and Licenses</ion-label>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-item>
+
+      <ion-item routerLink="/home/faq">
+        <ion-icon name="help-circle-outline"></ion-icon>
+        <ion-label>FAQ</ion-label>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-list>
+
+  <ion-list>
+    <ion-title>More</ion-title>
+
+    <ion-list>
+      <ion-item>
+        <ion-icon name="settings-outline"></ion-icon>
+        <ion-label>Settings</ion-label>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-item>
+
+      <ion-item (click)="logout()">
+        <ion-icon name="power-outline"></ion-icon>
+        <ion-label>Log Out</ion-label>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-item>
+
+    </ion-list>
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,174 @@
+<ion-header class="header">
+  <div class="navbar">
+    <span>Cart</span>
+    <ion-button fill="clear" shape="round">
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="addressBox">
+    <div class="address">
+      <span
+        ><ion-icon name="location-outline"></ion-icon>Deliver to:<b>John Deo</b
+        ></span
+      >
+      <span>Ashok Nagar, New delhi, 834467</span>
+    </div>
+    <ion-button>Change</ion-button>
+  </div>
+
+  <!-- here show user product which is user add to cart  -->
+   
+  <ion-card>
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <img alt="image" src="../../../assets/image/fruit-img.jpeg" />
+      </ion-thumbnail>
+      <ion-item lines="none">
+        <ion-label>
+          <h2>Fresh Fruits</h2>
+          <p>Mix-fresh fruits</p>
+          <div class="productRate">
+            <ng-container>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star-outline"></ion-icon>
+            </ng-container>
+          </div>
+          <div class="productPrice">
+            <span class="discount"
+              ><ion-icon name="arrow-down"></ion-icon>51%</span
+            >
+            <span style="text-decoration: line-through">₹784</span>
+            <span>₹364</span>
+          </div>
+        </ion-label>
+      </ion-item>
+    </ion-item>
+
+    <!-- here is button for paticuler product card to remove and buy  -->
+    <ion-row class="ion-justify-content-evenly">
+      <ion-button fill="clear"
+        ><ion-icon name="trash-outline"></ion-icon>Remove</ion-button
+      >
+      <ion-button fill="clear">
+        <ion-icon name="flash-outline"></ion-icon>Buy this now</ion-button
+      >
+    </ion-row>
+  </ion-card>
+
+  <ion-card>
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <img alt="image" src="../../../assets/image/Spice-img.jpeg" />
+      </ion-thumbnail>
+      <ion-item lines="none">
+        <ion-label>
+          <h2>Fresh Fruits</h2>
+          <p>Mix-fresh fruits</p>
+          <div class="productRate">
+            <ng-container>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star-outline"></ion-icon>
+            </ng-container>
+          </div>
+          <div class="productPrice">
+            <span class="discount"
+              ><ion-icon name="arrow-down"></ion-icon>51%</span
+            >
+            <span style="text-decoration: line-through">₹784</span>
+            <span>₹364</span>
+          </div>
+        </ion-label>
+      </ion-item>
+    </ion-item>
+
+    <!-- here is button for paticuler product card to remove and buy  -->
+    <ion-row class="ion-justify-content-evenly">
+      <ion-button fill="clear"
+        ><ion-icon name="trash-outline"></ion-icon>Remove</ion-button
+      >
+      <ion-button fill="clear">
+        <ion-icon name="flash-outline"></ion-icon>Buy this now</ion-button
+      >
+    </ion-row>
+  </ion-card>
+
+  <ion-card>
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <img alt="image" src="../../../assets/image/snacks-img.jpeg" />
+      </ion-thumbnail>
+      <ion-item lines="none">
+        <ion-label>
+          <h2>Fresh Fruits</h2>
+          <p>Mix-fresh fruits</p>
+          <div class="productRate">
+            <ng-container>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star-outline"></ion-icon>
+            </ng-container>
+          </div>
+          <div class="productPrice">
+            <span class="discount"
+              ><ion-icon name="arrow-down"></ion-icon>51%</span
+            >
+            <span style="text-decoration: line-through">₹784</span>
+            <span>₹364</span>
+          </div>
+        </ion-label>
+      </ion-item>
+    </ion-item>
+
+    <!-- here is button for paticuler product card to remove and buy  -->
+    <ion-row class="ion-justify-content-evenly">
+      <ion-button fill="clear"
+        ><ion-icon name="trash-outline"></ion-icon>Remove</ion-button
+      >
+      <ion-button fill="clear">
+        <ion-icon name="flash-outline"></ion-icon>Buy this now</ion-button
+      >
+    </ion-row>
+  </ion-card>
+
+
+
+    <!-- here all price details about product  -->
+    <div class="totalPriceDetails">
+      <h3>Price Details</h3>
+
+      <div class="priceDetails">
+          <span>Price (3 items)</span>
+          <span>₹674</span>
+      </div>
+      <div class="priceDetails">
+          <span>Discount</span>
+          <span style="color: green;">-₹43</span>
+      </div>
+      <div class="priceDetails">
+          <span>Delivery Charges</span>
+          <span>₹49</span>
+      </div>
+      <div class="priceDetails">
+          <span><b>Total Amount</b></span>
+          <span><b>₹633</b></span>
+      </div>
+  </div>
+
+  <!-- button for buy products  -->
+  <div class="paymentButton">
+      <ion-label><b>₹633</b></ion-label>
+      <ion-button color="warning">Place Order</ion-button>
+  </div>
+
+</ion-content>

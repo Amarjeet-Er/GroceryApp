@@ -1,0 +1,68 @@
+<div class="header">
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/home"></ion-back-button>
+  </ion-buttons>
+
+  <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</div>
+
+<ion-content>
+  <div class="banner">
+    <swiper [spaceBetween]="30" [centeredSlides]="true" [autoplay]="{ delay: 4000, disableOnInteraction: false }"
+      [pagination]="{ clickable: true }" [grabCursor]="true" [navigation]="true" class="mySwiper">
+      <ng-template swiperSlide *ngFor="let slider of slider_data">
+        <img class="slider_img" [src]="slider.path">
+      </ng-template>
+    </swiper>
+    <div class="container">
+      <h3>
+        Lorem ipsum dolor sit amet.
+        <br><a>See All Feature ></a>
+      </h3>
+      <div class="AmountBuuton">
+        <div>
+          <span>5kg</span><br>
+          <b>{{10 | currency:'INR'}} </b><del>{{18 | currency:'INR'}}</del> &nbsp;
+          <span>10% off</span>
+        </div>
+        <ion-button slot="end">Add</ion-button>
+      </div>
+    </div>
+  </div>
+
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header">
+        <ion-label>Production Information</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus possimus mollitia cum ratione
+        dignissimos veritatis delectus reprehenderit totam, natus perspiciatis! Modi impedit iure quam odit quo. Odit
+        consectetur nam tenetur veritatis sapiente quidem a pariatur quisquam quas qui! Quod minima neque at possimus
+        eos esse dolore! Consequatur facere quam rerum?
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+
+  <div class="nextproduct">
+    <div class="nextproductRow">
+      <span>Book Shipper For</span>
+    </div>
+    <div class="nextproductContainer">
+      <div class="manage">
+        <div class="card" *ngFor="let product of categorys">
+          <div>
+            <img src="{{product.path}}">
+            <h3>{{product.name}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,73 @@
+<ion-header class="header">
+  <div class="adrInfo">
+    <p>Location</p>
+    <span><ion-icon name="location"></ion-icon><span>Noida Utter Pradesh</span>
+      <ion-icon name="chevron-down"></ion-icon></span>
+  </div>
+
+  <ion-button shape="round">
+    <ion-icon slot="icon-only" name="notifications"></ion-icon>
+  </ion-button>
+</ion-header>
+<ion-content>
+  <ion-searchbar color="light"></ion-searchbar>
+  <div class="banner">
+    <swiper [spaceBetween]="30" [centeredSlides]="true" [autoplay]="{ delay: 4000, disableOnInteraction: false }"
+      [pagination]="{ clickable: true }" [grabCursor]="true" [navigation]="true" class="mySwiper">
+      <ng-template swiperSlide *ngFor="let slider of slider_data">
+        <img class="slider_img" [src]="slider.path" width="100%" height="100%">
+      </ng-template>
+    </swiper>
+  </div>
+
+  <!-- Explore By Category start -->
+  <ion-list>
+    <div class="categoryRow">
+      <span>Explore By Category</span>
+      <ion-button size="small" fill="clear" shape="round" routerLink="/home/categories">See All</ion-button>
+    </div>
+    <div class="VegetableList">
+      <div class="Vegetable" *ngFor="let category of categorys" routerLink="/home/categoryproductlist">
+        <div class="VegetableItem">
+          <img [src]="category.path" alt="">
+          <p>{{category.name}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-list>
+  <!-- Explore By Category end -->
+
+  <!-- Fruits and Vegetables start -->
+  <ion-list>
+    <div class="categoryRow">
+      <span>Fruits and Vegetables</span>
+      <ion-button size="small" fill="clear" shape="round" routerLink="/home/categories">See All</ion-button>
+    </div>
+    <div class="VegetableList">
+      <div class="Vegetable" *ngFor="let category of categorys" routerLink="/home/categoryproductlist">
+        <div class="VegetableItem">
+          <img [src]="category.path" alt="">
+          <p>{{category.name}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-list>
+  <!-- Fruits and Vegetables end -->
+
+  <!-- Gorcery & Kitechen start -->
+  <ion-list>
+    <div class="categoryRow">
+      <span>Gorcery & Kitechen</span>
+      <ion-button size="small" fill="clear" shape="round" routerLink="/home/categories">See All</ion-button>
+    </div>
+    <div class="VegetableList">
+      <div class="Vegetable" *ngFor="let category of categorys" routerLink="/home/categoryproductlist">
+        <div class="VegetableItem">
+          <img [src]="category.path" alt="">
+          <p>{{category.name}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-list>
+  <!-- Gorcery & Kitechen end -->
+</ion-content>

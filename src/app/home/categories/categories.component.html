@@ -1,0 +1,26 @@
+<ion-header class="header">
+  <div class="navbar">
+    <span>Categories</span>
+    <ion-button fill="clear" shape="round">
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="nextproduct">
+    <div class="nextproductRow">
+      <span>Fruits & Vegetables</span>
+    </div>
+    <div class="nextproductContainer">
+      <div class="manage">
+        <div class="card" *ngFor="let product of categorys">
+          <div>
+            <img src="{{product.path}}">
+            <h3>{{product.name}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

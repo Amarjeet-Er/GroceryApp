@@ -1,0 +1,15 @@
+ion-tab-button {
+  --color-selected: var(--primary-color);
+}
+
+ion-app {
+
+  ion-menu {
+    ion-toolbar {
+      padding: 10px 10px 0px;
+      display: flex;
+      justify-content: center;
+      --background: var(--primary-color);
+    }
+  }
+}

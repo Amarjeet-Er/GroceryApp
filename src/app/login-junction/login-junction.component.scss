@@ -1,0 +1,87 @@
+ion-content {
+  --background: var(--light-color);
+
+  .imgBox {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 50px;
+
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+
+      ion-title {
+        display: inline-block;
+        font-size: 60px;
+        --color: var(--primary-color)
+      }
+
+      ion-title::first-letter {
+        color: var(--primary-color)
+      }
+
+      ion-text {
+        font-size: 15px;
+      }
+    }
+  }
+
+
+  .main {
+    width: 100%;
+    height: calc(100% - 300px);
+    padding: 10px;
+
+    .ButtonBox {
+      width: 100%;
+      height: 155;
+      display: flex;
+      gap: 5px;
+      justify-content: space-between;
+      flex-direction: column;
+      line-height: 200px;
+
+      ion-button:first-child {
+        --background: var(--primary-color);
+        height: 60px;
+        --border-radius: 10px;
+        text-transform: none;
+        font-size: 18px;
+      }
+
+      ion-button:last-child {
+        --background: var(--brown-color);
+        --background: var(--primary-color);
+        height: 60px;
+        --border-radius: 10px;
+        text-transform: none;
+        font-size: 18px;
+      }
+    }
+
+    .footimg {
+      width: 100%;
+      height: 286px;
+
+      img {
+        opacity: 0.2;
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  .footimg img {
+    display: none;
+  }
+}

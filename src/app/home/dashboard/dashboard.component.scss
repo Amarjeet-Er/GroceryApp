@@ -1,0 +1,103 @@
+.header {
+    width: 100%;
+    height: 70px;
+    background: var(--primary-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+    .adrInfo {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        p {
+            margin: 0;
+            color: var(--white-color);
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+
+            ion-icon {
+                font-size: 20px;
+                color: var(--white-color);
+            }
+
+            span {
+                max-width: 130px;
+                color: var(--white-color);
+                display: inline-block;
+                text-wrap: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: 600;
+            }
+        }
+    }
+
+    ion-button {
+        color: var(--white-color);
+        --background: var(--primary-color);
+        --box-shadow: none;
+    }
+}
+
+ion-content {
+    .banner {
+        width: calc(100% - 20px);
+        margin: 0px 10px 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 15px;
+    }
+
+    .slider_img {
+        width: 100%;
+        height: 220px;
+        border-radius: 15px;
+    }
+
+    .categoryRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .VegetableList {
+        width: 100%;
+        display: flex;
+        overflow: auto;
+
+        .Vegetable {
+            height: 210px;
+
+            .VegetableItem {
+                width: 180px;
+                margin-left: 10px;
+                height: 170px;
+                text-align: center;
+                border-radius: 5px;
+
+                img {
+                    border-radius: 5px;
+                    width: 180px;
+                    height: 100%;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                }
+            }
+        }
+    }
+}
+
+
+::ng-deep .swiper-button-next,
+::ng-deep .swiper-button-prev {
+    color: #f4f4f4;
+    background-blend-mode: color-dodge;
+    opacity: 0 !important;
+}

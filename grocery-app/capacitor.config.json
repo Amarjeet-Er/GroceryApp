@@ -1,0 +1,10 @@
+{
+  "appId": "com.grocery.app",
+  "appName": "Grocery App",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}

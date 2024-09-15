@@ -1,0 +1,96 @@
+.header {
+    width: 100%;
+    height: 70px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+
+        ion-button {
+            position: absolute;
+            color: var(--white-color);
+        }
+
+        span {
+            font-size: 20px;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+.mapbox {
+    position: relative;
+    height: 400px;
+    background: #ddd;
+}
+
+#dot {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#dot .ping {
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(255, 0, 0, 0.2);
+    border-radius: 50%;
+    animation: sonar 1.25s infinite linear;
+}
+
+#dot1 {
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    left: 80%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+#dot1 .ping1 {
+    border: 1px solid blue;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(8, 36, 192, 0.2);
+    border-radius: 50%;
+    animation: sonar 1.25s infinite linear;
+}
+
+@keyframes sonar {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(4);
+    }
+}
+
+.address {
+    padding: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.8;
+    color: #222;
+}

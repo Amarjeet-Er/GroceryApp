@@ -1,0 +1,152 @@
+.header {
+  width: 100%;
+  height: 70px;
+  background: var(--primary-color);
+  color: var(--light-color);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+
+    ion-button {
+      position: absolute;
+      color: var(--white-color);
+      right: 10px;
+    }
+
+    span {
+      font-size: 20px;
+      margin: 0 auto;
+    }
+  }
+}
+
+ion-content {
+  .addressBox {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 0 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .address {
+      width: calc(100% - 100px);
+      height: 100%;
+      gap: 5px;
+      text-wrap: nowrap;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--black-color);
+      }
+    }
+
+    ion-button {
+      width: 100px;
+      text-transform: capitalize;
+      --background: var(--primary-color);
+    }
+  }
+
+  // product design card start here
+  ion-card {
+    text-wrap: nowrap;
+
+    ion-label {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .productRate {
+      display: flex;
+      gap: 5px;
+      color: green;
+    }
+
+    .productPrice {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 18px;
+      font-weight: 600;
+
+      .discount {
+        align-items: center;
+        display: flex;
+        color: green;
+      }
+    }
+
+    ion-button {
+      font-size: 12px;
+      width: 45%;
+      color: var(--primary-color);
+
+      ion-icon {
+        font-size: 25px;
+      }
+    }
+  }
+
+  // total price design scss code start here
+  .totalPriceDetails {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 0 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    h3 {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .priceDetails {
+      height: auto;
+      width: 100%;
+      display: flex;
+      font-size: 16px;
+      margin: 7px 0;
+      padding: 0 10px;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+    .priceDetails:last-child {
+      border-top: 1px solid gray;
+      padding-top: 10px;
+    }
+  }
+
+  // design for payment button
+  .paymentButton {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    gap: 5px;
+    background-color: white;
+
+    ion-button {
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,146 @@
+<div class="header">
+  <div class="navbar">
+    <ion-button fill="clear" shape="round" routerLink="/home/account">
+      <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+    </ion-button>
+    <span>Add Address</span>
+  </div>
+</div>
+
+<ion-content>
+  <ion-toolbar>
+    <ion-item lines="full">
+      <ion-button fill="clear" (click)="openAddModal()">
+        <ion-icon name="add-circle"></ion-icon>
+        Add a new address
+      </ion-button>
+    </ion-item>
+  </ion-toolbar>
+
+  <ion-list class="selected">
+    <ion-icon name="ellipsis-vertical"></ion-icon>
+    <ion-popover #pop triggerAction="click">
+      <ng-template>
+        <ion-list style="margin: 0">
+          <ion-item>
+            <ion-icon aria-hidden="true" name="pencil" slot="end"></ion-icon>
+            <ion-label>Edit</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon
+              aria-hidden="true"
+              name="trash-outline"
+              slot="end"
+            ></ion-icon>
+            <ion-label>Remove</ion-label>
+          </ion-item>
+        </ion-list>
+      </ng-template>
+    </ion-popover>
+
+    <h5>John Deo</h5>
+    <p>9163348354</p>
+    <p>Ashok Nagar, New delhi, 834467</p>
+  </ion-list>
+
+  <ion-list>
+    <ion-icon name="ellipsis-vertical"></ion-icon>
+    <ion-popover #pop triggerAction="click">
+      <ng-template>
+        <ion-list style="margin: 0">
+          <ion-item>
+            <ion-icon aria-hidden="true" name="pencil" slot="end"></ion-icon>
+            <ion-label>Edit</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon
+              aria-hidden="true"
+              name="trash-outline"
+              slot="end"
+            ></ion-icon>
+            <ion-label>Remove</ion-label>
+          </ion-item>
+        </ion-list>
+      </ng-template>
+    </ion-popover>
+
+    <h5>John Deo</h5>
+    <p>9163348354</p>
+    <p>Ashok Nagar, New delhi, 834467</p>
+  </ion-list>
+</ion-content>
+
+<ion-modal #modal>
+  <ng-template>
+    <div class="header">
+      <div class="navbar">
+        <ion-button fill="clear" shape="round" (click)="modal.dismiss()">
+          <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+        </ion-button>
+        <span>Add Address</span>
+      </div>
+    </div>
+
+    <ion-content class="ion-padding">
+      <ion-input
+        label="Full Name"
+        label-placement="floating"
+        fill="outline"
+        required
+      ></ion-input>
+
+      <ion-input
+        type="tel"
+        label="Mobile Number"
+        label-placement="floating"
+        fill="outline"
+        helperText="Enter a valid mobile number"
+        errorText="Invalid mobile number"
+        required
+        minlength="10"
+        maxlength="10"
+        pattern="\d{10}"
+      >
+      </ion-input>
+
+      <ion-input
+        label="Pincode"
+        label-placement="floating"
+        fill="outline"
+        required
+      ></ion-input>
+
+      <ion-input
+        label="State"
+        label-placement="floating"
+        fill="outline"
+        required
+      ></ion-input>
+
+      <ion-input
+        label="City"
+        label-placement="floating"
+        fill="outline"
+        required
+      ></ion-input>
+
+      <ion-input
+        label="House No., Building Name"
+        label-placement="floating"
+        fill="outline"
+        required
+      ></ion-input>
+
+      <ion-input
+        label="Road Name, Area, Colony"
+        label-placement="floating"
+        fill="outline"
+        required
+      ></ion-input>
+
+      <ion-row class="ion-justify-content-center">
+        <ion-button (click)="saveAddress(modal)">Save Address</ion-button>
+      </ion-row>
+    </ion-content>
+  </ng-template>
+</ion-modal>
