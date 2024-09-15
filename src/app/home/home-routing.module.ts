@@ -9,6 +9,7 @@ import { CategoryProducatListComponent } from './category-producat-list/category
 import { TearmAndConditionComponent } from './tearm-and-condition/tearm-and-condition.component';
 import { FaqComponent } from './faq/faq.component';
 import { LocationTrackComponent } from './location-track/location-track.component';
+import { SettingComponent } from './setting/setting.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'tearmandcondition', component: TearmAndConditionComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'locationtrack', component: LocationTrackComponent },
+  { path: 'setting', component: SettingComponent },
 ];
 
 @NgModule({

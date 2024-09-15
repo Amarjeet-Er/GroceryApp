@@ -13,12 +13,12 @@
       <span>Orders</span>
     </ion-card>
 
-
-    <ion-card routerLink="/home/cart">
-      <ion-icon name="cart"></ion-icon>
-      <span>Cart</span>
-    </ion-card>
-    
+    <div routerLink="/home/cart">
+      <ion-card>
+        <ion-icon name="cart"></ion-icon>
+        <span>Cart</span>
+      </ion-card>
+    </div>
 
     <ion-card>
       <ion-icon name="gift-outline"></ion-icon>
@@ -89,7 +89,7 @@
     <ion-title>More</ion-title>
 
     <ion-list>
-      <ion-item>
+      <ion-item routerLink="/home/setting">
         <ion-icon name="settings-outline"></ion-icon>
         <ion-label>Settings</ion-label>
         <ion-icon name="chevron-forward"></ion-icon>
