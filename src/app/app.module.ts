@@ -25,6 +25,7 @@ import { CategoryProducatListComponent } from './home/category-producat-list/cat
 import { TearmAndConditionComponent } from './home/tearm-and-condition/tearm-and-condition.component';
 import { FaqComponent } from './home/faq/faq.component';
 import { LocationTrackComponent } from './home/location-track/location-track.component';
+import { SettingComponent } from './home/setting/setting.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { LocationTrackComponent } from './home/location-track/location-track.com
     CategoryProducatListComponent,
     TearmAndConditionComponent,
     FaqComponent,
-    LocationTrackComponent
+    LocationTrackComponent,
+    SettingComponent
   ],
   imports: [
     BrowserModule, 
