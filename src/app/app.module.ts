@@ -30,6 +30,7 @@ import { OrderDetailsComponent } from './home/order-details/order-details.compon
 import { HelpCenterComponent } from './home/help-center/help-center.component';
 import { CouponsComponent } from './home/coupons/coupons.component';
 import { SettingComponent } from './home/setting/setting.component';
+import { GoogleMapsModule } from '@angular/google-maps'; // Import GoogleMapsModule
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { SettingComponent } from './home/setting/setting.component';
     FormsModule,
     ReactiveFormsModule,
     SwiperModule,
+    GoogleMapsModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
