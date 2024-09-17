@@ -1,0 +1,104 @@
+<div class="header">
+  <div class="navbar">
+    <ion-button fill="clear" shape="round" routerLink="">
+      <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+    </ion-button>
+    <span>Grocery Payment</span>
+  </div>
+</div>
+
+<ion-content>
+  <ion-grid>
+    <!-- Cart Summary -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Order Summary</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Item Name</ion-label>
+              <ion-label class="ion-text-end">{{ 'itemName' }}</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Quantity</ion-label>
+              <ion-label class="ion-text-end">{{ 'itemQuantity' }}</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Price</ion-label>
+              <ion-label class="ion-text-end">{{ 12 | currency: 'INR' }}</ion-label>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- Price Breakdown -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Price Breakdown</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Subtotal</ion-label>
+              <ion-label class="ion-text-end">{{ 12 | currency: 'INR' }}</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Delivery Charge</ion-label>
+              <ion-label class="ion-text-end">{{ 3 | currency: 'INR' }}</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Discount</ion-label>
+              <ion-label class="ion-text-end">{{ 2 | currency: 'INR' }} %</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Final Price</ion-label>
+              <ion-label class="ion-text-end finalprice">{{ 8 | currency: 'INR' }}</ion-label>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- Delivery Option -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label>Delivery Option</ion-label>
+          <ion-select [(ngModel)]="deliveryOption" placeholder="Select Delivery">
+            <ion-select-option value="standard">Standard Delivery</ion-select-option>
+            <ion-select-option value="express">Express Delivery</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Payment Confirmation -->
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-item lines="none">
+              <ion-checkbox slot="start" [(ngModel)]="isChecked"></ion-checkbox>
+              <ion-label>
+                By submitting you accept our <b>terms & conditions</b> and read our <b>privacy policy</b>.
+              </ion-label>
+            </ion-item>
+
+            <ion-button expand="block" (click)="payNow()" color="primary" [disabled]="!isChecked || !deliveryOption">
+              Pay Now {{ 8 | currency: 'INR' }}
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-grid>
+</ion-content>

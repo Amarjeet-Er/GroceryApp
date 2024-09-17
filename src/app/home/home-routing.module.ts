@@ -14,6 +14,8 @@ import { OrdersComponent } from './orders/orders.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import { HelpCenterComponent } from './help-center/help-center.component';
 import { CouponsComponent } from './coupons/coupons.component';
+import { RefundsComponent } from './refunds/refunds.component';
+import { LazorpayDescriptionComponent } from '../lazorpay-description/lazorpay-description.component';
 
 const routes: Routes = [
   {
@@ -36,6 +38,8 @@ const routes: Routes = [
   { path: 'orderdetails', component: OrderDetailsComponent },
   { path: 'helpcenter', component: HelpCenterComponent },
   { path: 'coupons', component: CouponsComponent },
+  { path: 'refunds', component: RefundsComponent },
+  { path: 'lazorpay', component: LazorpayDescriptionComponent }
 ];
 
 @NgModule({

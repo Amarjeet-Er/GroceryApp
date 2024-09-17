@@ -1,0 +1,29 @@
+<div class="header">
+  <div class="navbar">
+    <ion-button fill="clear" shape="round" routerLink="/home/account">
+      <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+    </ion-button>
+    <span>Refunds</span>
+  </div>
+</div>
+
+<ion-content>
+  <!-- List of past orders with refund options -->
+  <ion-list>
+    <ion-item *ngFor="let order of orders">
+      <ion-thumbnail slot="start">
+        <img [src]="order.image" alt="{{ order.itemName }}">
+      </ion-thumbnail>
+
+      <ion-label>
+        <h2>{{ order.itemName }}</h2>
+        <p>Order Date: {{ order.orderDate }}</p>
+        <p>Price: ₹{{ order.price }}</p>
+      </ion-label>
+
+      <ion-button color="danger" fill="outline" slot="end" (click)="requestRefund(order)">
+        Request
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -31,6 +31,8 @@ import { HelpCenterComponent } from './home/help-center/help-center.component';
 import { CouponsComponent } from './home/coupons/coupons.component';
 import { SettingComponent } from './home/setting/setting.component';
 import { GoogleMapsModule } from '@angular/google-maps'; // Import GoogleMapsModule
+import { RefundsComponent } from './home/refunds/refunds.component';
+import { LazorpayDescriptionComponent } from './lazorpay-description/lazorpay-description.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,10 @@ import { GoogleMapsModule } from '@angular/google-maps'; // Import GoogleMapsMod
     OrderDetailsComponent,
     HelpCenterComponent,
     CouponsComponent,
-    SettingComponent
+    SettingComponent,
+    RefundsComponent,
+    LazorpayDescriptionComponent,
+
   ],
   imports: [
     BrowserModule, 

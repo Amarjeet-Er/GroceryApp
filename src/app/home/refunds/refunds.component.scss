@@ -1,0 +1,49 @@
+.header {
+    width: 100%;
+    height: 70px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+
+        ion-button {
+            position: absolute;
+            color: var(--white-color);
+        }
+
+        span {
+            font-size: 20px;
+            margin: 0 auto;
+        }
+    }
+}
+
+ion-item {
+    --padding-start: 15px;
+    --padding-end: 15px;
+    --inner-padding-top: 10px;
+    --inner-padding-bottom: 10px;
+}
+
+ion-thumbnail img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+}
+
+ion-label h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+ion-button {
+    --padding-start: 15px;
+    --padding-end: 15px;
+}
